@@ -33,7 +33,11 @@ library BasicMaths {
      *
      * _Available since v3.4._
      */
-    function addOrSub(bool isAdd, uint256 a, uint256 b) internal pure returns (uint256) {
+    function addOrSub(
+        bool isAdd,
+        uint256 a,
+        uint256 b
+    ) internal pure returns (uint256) {
         if (isAdd) {
             return a + b;
         } else {
@@ -46,7 +50,11 @@ library BasicMaths {
      *
      * _Available since v3.4._
      */
-    function addOrSub2Zero(bool isAdd, uint256 a, uint256 b) internal pure returns (uint256) {
+    function addOrSub2Zero(
+        bool isAdd,
+        uint256 a,
+        uint256 b
+    ) internal pure returns (uint256) {
         if (isAdd) {
             return a + b;
         } else {
@@ -59,11 +67,11 @@ library BasicMaths {
     }
 
     function sqrt(uint256 x) internal pure returns (uint256) {
-        uint256 z = (x + 1 ) / 2;
+        uint256 z = (x + 1) / 2;
         uint256 y = x;
-        while(z < y){
+        while (z < y) {
             y = z;
-            z = ( x / z + z ) / 2;
+            z = (x / z + z) / 2;
         }
         return y;
     }
